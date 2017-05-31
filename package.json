@@ -1,12 +1,15 @@
 {
-  "name": "nodemailer",
+  "name": "@mixmaxhq/nodemailer",
   "version": "1.4.1",
   "description": "Easy as cake e-mail sending from your Node.js applications",
   "main": "src/nodemailer.js",
   "scripts": {
     "test": "grunt"
   },
-  "repository": "git://github.com/mixmaxhq/nodemailer.git",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mixmaxhq/nodemailer.git"
+  },
   "keywords": [
     "e-mail",
     "mime",
@@ -42,5 +45,9 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
   }
 }
