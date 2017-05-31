@@ -56,6 +56,7 @@ Compiler.prototype.compile = function() {
         'references',
         'subject',
         'message-id',
+        'x-attachment-id',
         'date'
     ].forEach(function(header) {
         var key = header.replace(/-(\w)/g, function(o, c) {
@@ -191,6 +192,7 @@ Compiler.prototype._createContentNode = function(parentNode, element) {
 
     if (element.cid) {
         node.setHeader('Content-Id', '<' + element.cid.replace(/[<>]/g, '') + '>');
+        node.setHeader('X-Attachment-Id', element.cid.replace(/[<>]/g, ''));
     }
 
     if (this.mail.encoding && /^text\//i.test(element.contentType)) {
