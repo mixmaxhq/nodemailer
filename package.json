@@ -24,7 +24,7 @@
   "homepage": "http://www.nodemailer.com",
   "devDependencies": {
     "chai": "^3.0.0",
-    "grunt": "^0.4.5",
+    "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-mocha-test": "^0.12.7",
     "nodemailer-dkim": "^1.0.3",
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "buildmail": "^1.2.4",
+    "global": "^4.3.2",
     "hyperquest": "^1.2.0",
     "libmime": "^1.0.0",
     "nodemailer-direct-transport": "^1.0.2",
