@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.4.1 2017-05-30
+
+Add X-Attachment-Id header for gmail on iOS support for inline attachment.
+
 ## v1.4.0 2015-06-27
 
 Added new message option `watchHtml` to specify Apple Watch specific HTML part of the message. See [this post](https://litmus.com/blog/how-to-send-hidden-version-email-apple-watch) for details
