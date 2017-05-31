@@ -1,15 +1,12 @@
 {
   "name": "nodemailer",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Easy as cake e-mail sending from your Node.js applications",
   "main": "src/nodemailer.js",
   "scripts": {
     "test": "grunt"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/andris9/Nodemailer.git"
-  },
+  "repository": "git://github.com/mixmaxhq/nodemailer.git",
   "keywords": [
     "e-mail",
     "mime",
@@ -33,8 +30,8 @@
     "nodemailer-dkim": "^1.0.3",
     "nodemailer-markdown": "^1.0.0",
     "nodemailer-stub-transport": "^1.0.0",
-    "smtp-server": "^1.4.0",
-    "sinon": "^1.15.4"
+    "sinon": "^1.15.4",
+    "smtp-server": "^1.4.0"
   },
   "dependencies": {
     "buildmail": "^1.2.4",
