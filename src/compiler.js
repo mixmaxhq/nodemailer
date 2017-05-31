@@ -191,6 +191,10 @@ Compiler.prototype._createContentNode = function(parentNode, element) {
 
     if (element.cid) {
         node.setHeader('Content-Id', '<' + element.cid.replace(/[<>]/g, '') + '>');
+        // The gmail iOS client requires the X-Attachment-Id header for correct interpretation of
+        // inline attachments. Without this header, if someone replies to a Mixmax email with inline
+        // content in Gmail on iOS, it is presented as an attachment, not inline content.
+        // Context ref: https://app.asana.com/0/14554530553180/344816303378955
         node.setHeader('X-Attachment-Id', element.cid.replace(/[<>]/g, ''));
     }
 
