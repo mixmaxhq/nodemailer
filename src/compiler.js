@@ -56,7 +56,6 @@ Compiler.prototype.compile = function() {
         'references',
         'subject',
         'message-id',
-        'x-attachment-id',
         'date'
     ].forEach(function(header) {
         var key = header.replace(/-(\w)/g, function(o, c) {
