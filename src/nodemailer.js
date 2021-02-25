@@ -9,6 +9,9 @@ var packageData = require('../package.json');
 var fs = require('fs');
 var hyperquest = require('hyperquest');
 
+// Export setBaseBoundaryPrefix
+module.exports.setBaseBoundaryPrefix = Compiler.setBaseBoundaryPrefix;
+
 // Export createTransport method
 module.exports.createTransport = function(transporter) {
     transporter = transporter || directTransport({
