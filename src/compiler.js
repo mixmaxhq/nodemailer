@@ -5,6 +5,32 @@ var libmime = require('libmime');
 
 module.exports = Compiler;
 
+// HACK(rtasson): the following couple of lines are hacks to permit us to
+// modify the MIME part boundary prefix without upgrading our nodemailer
+// version to one that supports this natively.
+// The following baseBoundaryPrefix is what buildmail uses on our old version:
+// https://github.com/nodemailer/buildmail/blob/e38d2d0bdc4d5957e126f90953c0955867a51ce3/src/buildmail.js#L781
+let baseBoundaryPrefix = '----sinikael-?=_';
+
+/**
+ * A convenience function to allow us to change the baseBoundaryPrefix.
+ *
+ * @param {String} prefix The MIME boundary prefix to set
+ */
+module.exports.setBaseBoundaryPrefix = function(prefix) {
+  baseBoundaryPrefix = prefix;
+};
+
+/*
+ * Generates a multipart boundary value. This is a patch of the buildmail code.
+ *
+ * @return {String} boundary value
+ */
+BuildMail.prototype._generateBoundary = function() {
+  return baseBoundaryPrefix + this._nodeId + '-' + this.rootNode.baseBoundary;
+};
+// end hack
+
 /**
  * Creates the object for composing a BuildMail instance out from the mail options
  *
