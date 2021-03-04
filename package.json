@@ -1,6 +1,6 @@
 {
   "name": "@mixmaxhq/nodemailer",
-  "version": "1.4.2-beta",
+  "version": "1.4.2",
   "description": "Easy as cake e-mail sending from your Node.js applications",
   "main": "src/nodemailer.js",
   "scripts": {
